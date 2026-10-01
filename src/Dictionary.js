@@ -13,7 +13,8 @@ export default function Dictionary() {
     event.preventDefault();
     alert(`Searching for ${keyword} definition`);
 
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    let apiKey = "aofcd5541add57c0396398488b47at43";
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}&_gl=1*1w60qyg*_up*MQ..*_ga*MTYyMTMzNDE0OS4xNzkwODYyOTg1*_ga_HB45F6ZNE6*czE3OTA4NjI5ODQkbzEkZzEkdDE3OTA4NjMwMjIkajIyJGwwJGgw`;
     axios.get(apiUrl).then(handleResponse);
   }
 
